@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuisine</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/6155000134.js" crossorigin="anonymous" ascync></script>
+    <script src="script.js" async></script>
+</head>
+<body>
+    <header>
+        <i id='dropDownButton' class="fa-solid fa-bars"></i>
+        <nav class="navigation
+        ">
+            <ul>
+                <li><a class="nav-links" href="#">Home</a></li>
+                <li><a class="nav-links" href="#">About Us</a></li>
+                <li><a class="nav-links" href="#">Menu</a></li>
+                <li><a class="nav-links" href="#">Order Now</a></li>
+                <li><a class="nav-links" href="#">Blog</a></li>
+                <li><a class="nav-links" href="#">Location</a></li>
+
+                <section class="nav-socials">
+                    <a href="#FBpage"><i class="fa-brands fa-facebook-square"></i></a>
+                    <a href="#twitterpage"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#IGpage"><i class="fa-brands fa-instagram"></i></a>
+                </section>
+            </ul>
+        </nav>
+        <div id="cart" class="fa fa-shopping-cart"></div>
+        <input type='text' id="search" placeholder="&#xF002; Search"></input>
+    </header>
+
+    <main>
+        <div class="greeting">
+            <h2>
+                Coders <p>Coffee</p>
+            </h2>
+            <p class="slogan">
+                Putting the java in JavaScript
+            </p>
+        </div>
+        
+        <img class="main-background" src="./assests/Coffee-Cup.png" alt="cup of cofee">
+       
+        <form class="searchingFood" action="">
+            <input type="search" placeholder="Search Here">
+            <label class="custom-selector" for="Locations">
+                <select name="Locations" id="locations" >
+                    <option selected value="location1: Vancouver">Vancouver</option>
+                    <option value="location2: Surrey">Surrey</option>
+                    <option value="location3: Richmond">Richmond</option>
+                    <option value="location4: Abbotsford">Abbotsford</option>
+                </select>
+            </label>
+        </form>
+
+        <section class="socials">
+            <a href="#FBpage"><i class="fa-brands fa-facebook-square"></i></a>
+            <a href="#twitterpage"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#IGpage"><i class="fa-brands fa-instagram"></i></a>
+        </section>
+        
+        <div class="more">
+            <p>Scroll for more</p>
+            <i id="moreToSite" class="fa-solid fa-chevron-down"></i>
+        </div>
+    </main>
+
+    <section id="About-Us">
+        <h3>
+            AboutUs
+        </h3>
+        <div class="aboutSub">
+            <h2>
+                Dicover Our Restaurant Story
+            </h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt sunt unde obcaecati saepe repellendus cumque impedit asperiores dolor nihil ducimus corrupti eos velit laborum quis culpa ut quaerat, consectetur cum iure expedita. Non consequuntur quasi suscipit, ea nam deserunt pariatur totam facere aut sunt temporibus. Eum optio, iste dolorem doloremque molestiae ut dolore sed totam rerum soluta possimus! Dicta eligendi itaque totam blanditiis illum fuga doloribus assumenda excepturi consequatur quo consectetur quis quae velit.
+            </p>
+            <br>
+            <p>
+                Perferendis soluta accusantium doloremque sequi dolorum sed odit quisquam eveniet voluptates! Soluta perspiciatis facilis quis id necessitatibus sequi nobis fugit veritatis, similique aliquam, quasi commodi modi.
+            </p>
+
+        </div>
+
+        <div class="menuButton">
+            <a href="#menu">Discover Munu <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <section class="menuPreview">
+        <h2>
+            Special Blends and Tasty Treats
+        </h2>
+
+        <section class="carousel" aria-label="Gallery">
+            <ol class="carousel__viewport">
+              <li id="carousel__slide1"
+                tabindex="0"
+                class="carousel__slide">
+                  <img class="rotshot" src="./assests/snacks/pour-over.jpg" alt="">
+              </li>
+
+              <li id="carousel__slide2"
+                tabindex="0"
+                class="carousel__slide">
+                  <img src="./assests/snacks/muffins.jpg" alt="" class="rotshot">
+              </li>
+
+              <li id="carousel__slide3"
+                tabindex="0"
+                class="carousel__slide">
+                  <img src="./assests/snacks/espresso.jpg" alt="" class="rotshot">
+              </li>
+
+              <li id="carousel__slide4"
+                tabindex="0"
+                class="carousel__slide">
+                  <img src="./assests/snacks/croissant.jpg" alt="" class="rotshot">
+
+              </li>
+
+            </ol>
+            <aside class="carousel__navigation">
+                  <a href="#carousel__slide1"
+                     class="carousel__navigation-button">Go to slide 1</a>
+
+
+                  <a href="#carousel__slide2"
+                     class="carousel__navigation-button">Go to slide 2</a>
+
+                  <a href="#carousel__slide3"
+                     class="carousel__navigation-button">Go to slide 3</a>
+
+
+                  <a href="#carousel__slide4"
+                     class="carousel__navigation-button">Go to slide 4</a>
+            </aside>
+          </section>
+
+            <table class="menu">
+            <tr>
+                <th style="width: 50%">item</th>
+                <th style="width: 25%">Tall</th>
+                <th style="width: 25%">Venti</th>
+            </tr>
+            <tr class="menuItems fadeIn">
+                <td>Pour-Over Cofee</td>
+                <td>$3</td>
+                <td>$4</td>
+            </tr>
+            <tr class="menuItems fadeIn">
+                <td>Cafe Late</td>
+                <td>$3</td>
+                <td>$4</td>
+            </tr>
+            <tr class="menuItems fadeIn">
+                <td>Americano</td>
+                <td>$3</td>
+                <td>$4</td>
+            </tr>
+            <tr class="menuItems fadeIn">
+                <td>Flat White</td>
+                <td>$3</td>
+                <td>$4</td>
+            </tr>
+            <tr class="menuItems fadeIn">
+                <td>Coissant</td>
+                <td>$3</td>
+                <td>$4</td>
+            </tr>
+            <tr class="menuItems fadeIn">
+                <td>Muffin</td>
+                <td>$3</td>
+                <td>$4</td>
+            </tr>
+            <tr class="menuItems fadeIn">
+                <td>Bottle Water</td>
+                <td></td>
+                <td>$4</td>
+            </tr>
+            </table>
+
+
+    </section>
+
+    <section class="openingHours">
+        <a href="#">Book a Table</a>
+
+        <h2>
+            Opening Hours
+        </h2>
+        <section class="hours">
+            <section class="monTues">
+                <span>Monday - Tuesday</span><br>
+                <span>09:00 - 22:00</span>
+            </section>
+            <section class="friSun">
+                <span>Friday - Sunday</span>
+                <span>11:00 - 20:00</span>
+            </section>
+        </section>
+        <div class="imageOfFood">
+            
+        </div>
+    </section>
+
+
+</body>
+</html>

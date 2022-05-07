@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Palette+Mosaic&family=Teko:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --beige: #EDDAC6;
+    --babyblue: rgb(107, 178, 245);
+    --coffee: #662D3F;
+}
+
+body {
+    font-family: 'Teko', sans-serif;
+}
+
+header {
+    position: relative;
+    display: flex;
+    width: 100;
+    height: 3rem;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 700;
+}
+
+.navigation {
+    display: none;
+    position: absolute;
+    text-align: center;
+    inset: 3rem auto auto 0;
+    background-color: white;
+    height: calc(100vh - 3rem);
+    width: 0;
+    z-index: 2;
+}
+
+.navigation.flipOut {
+    display: block;
+    width: 200px;
+    animation: grow ease 700ms;
+    transform-origin: left;
+}
+
+ul li{
+    width: 70%;
+    text-align: center;
+    list-style: none;
+    display: block;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 1rem;
+    padding: 0.2rem
+}
+
+.nav-links {
+    text-decoration: none;
+    color: black;
+}
+
+ul>li:hover {
+    background-color: #EDDAC6;
+}
+
+.nav-socials {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 2rem;
+    position:absolute;
+    bottom: 1rem;
+}
+
+#cart {
+    margin: 0 0.7rem;
+    font-size: 1.5rem;
+}
+
+#search {
+    border: none;
+    margin: 0 0.5rem; 
+    height: 1.5rem;
+    width: 7rem;
+    font-size: 1.2rem;
+}
+
+#search::placeholder {
+    font-size: 1.2rem;
+    font-family: 'Helvetica', FontAwesome, sans-serif;
+    color: black;
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--beige);
+    padding-bottom: 1rem;
+}
+
+.greeting {
+    z-index: 1;
+    color: var(--coffee);
+}
+
+.main-background {
+    display: none;
+}
+
+.greeting h2 {
+    float: right;
+    font-family: 'Inspiration', cursive;
+    font-size: 10rem;
+    margin: 3rem 0;
+    display: block;
+}
+
+.greeting h2>p{
+    font-size: 0.8em;
+    float: right;
+}
+
+.slogan {
+    clear:both;
+    font-size: 1.7rem;  
+    height: 2rem;
+    width: 90vw;
+    text-align: center;
+    color: var(--coffee)
+}
+
+.searchingFood {
+    position: absolute;
+    bottom: 15rem;
+    display: flex;
+    width: clamp(15rem, 23rem, 25rem);
+    height: 2rem;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.searchingFood input {
+    width: 75%;
+    height: 2rem;
+    border-radius: 0.3rem 0 0 0.3rem;
+    border: none;
+    padding-left: 0.5rem;
+}
+
+input::placeholder {
+    content: '\f002';
+    color: black;
+}
+
+#locations {
+    font-family: 'Teko', sans-serif;
+    font-size: 0.9rem;
+    position: absolute;
+    text-align: center;
+    width: 25%;
+    height: 2rem;
+    border-radius: 0 0.3rem 0.3rem 0;
+    border: none;
+    background-color: orange;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-progress-appearance: none;
+}
+
+.custom-selector::after {
+    display: inline-block;
+    content: '';
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: black;
+    position: absolute;
+    right: 0.3rem;
+    top: 0.9rem;
+}
+
+.selector-options {
+    position: absolute;
+    margin: 0;
+    right: 0;
+    top: 1px;
+    background-color: orange;
+    width: 25%;
+    border-radius: 0 0.3rem 0.3rem 0.3rem;
+}
+
+.selector-options li {
+    font-family: default;
+    font-size: 0.9rem;
+    padding: 0;
+    margin: auto;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.socials {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.socials * {
+    display: none;
+}
+
+.more {
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+#moreToSite {
+    text-align: center;
+    height: 2rem;
+    font-size: 2rem;
+    color: black;
+    animation: bounce infinite 0.5s;
+}
+
+#About-Us {
+    position: relative;
+    width: 100vw;
+    height: 75vh;
+    background-image: url('../assests/yanapi-senaud-6HR8vpjYUHo-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#About-Us h3 {
+    position: relative;
+    font-size: 5rem;
+    width: 75%;
+    top: 1rem;
+    left: 1rem;
+    color: aliceblue;
+}
+
+.aboutSub {
+    text-align: center;
+    color: aliceblue;
+    margin: 4rem auto;
+    padding: 0 0.5rem;
+    background-color: rgba(0, 0, 0, 0.705);
+}
+
+.aboutSub h2 {
+    font-size: 2rem;    
+}
+
+.aboutSub p {
+    line-height: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.menuButton {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    height: 2rem;
+    width: 8.5rem;
+    line-height: 2rem;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+
+}
+
+.menuButton a {
+    text-decoration: none;
+    color: var(--coffee)
+}
+
+.menuPreview {
+    background-color: var(--beige);
+    height: auto;
+    width: 100vw;
+    padding: 2rem 0;
+}
+
+.menuPreview h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.carousel {
+    aspect-ratio: 9/16;
+    width: 90vw;
+    height: auto;
+    margin: 3rem auto;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+}
+
+.carousel__viewport {
+    position: absolute;
+    inset: 0 0 0 0;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;
+    scroll-snap-align: center;
+    animation: tonext, snap, ease, 1s, infinite;
+}
+
+.carousel__navigation-button {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: aliceblue;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+}
+
+.carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 3rem;
+    left: 0;
+    text-align: center;
+}
+
+.rotshot {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.menu {
+    margin: 0 auto;
+    width: 90%
+}
+
+.menuItems {
+    font-size: 1.3rem;
+    border-bottom: 1px solid black;
+    height: 1.7rem;
+    line-height: 1.7;
+}
+
+.menuItems:first-child {
+    border-right: 1px solid black;
+}
+
+.menuItems:last-of-type {
+    border-bottom: none;
+}
+
+.menuItems td + td {
+    text-align: center;
+}
+
+
+.fadeIn {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+
+.fadeIn.appear {
+    opacity: 1;
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    main {
+        background-size: stretch;
+        background-position: 20rem 0;
+        padding-left: 10rem ;
+    }
+
+    .main-background {
+        height: 50%;
+        width: auto;
+        bottom: 0;
+        right: 5rem;
+    }
+
+    .greeting h2{
+        font-size: 15rem;
+    }
+
+    .socials {
+        right: 2rem;
+    }
+
+    .socials * {
+        font-size: 2.5rem;
+    }
+}
+
+@keyframes grow {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+  }
+
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(0.2rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
