@@ -91,8 +91,10 @@ ul>li:hover {
 }
 
 main {
+    position: relative;
     width: 100%;
     height: calc(100vh - 3rem);
+    min-height: 40rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -105,6 +107,7 @@ main {
 .greeting {
     z-index: 1;
     color: var(--coffee);
+    clear: both ;
 }
 
 .main-background {
@@ -114,7 +117,7 @@ main {
 .greeting h2 {
     float: right;
     font-family: 'Inspiration', cursive;
-    font-size: 10rem;
+    font-size: clamp(1rem, 25vh, 20rem);
     margin: 3rem 0;
     display: block;
 }
@@ -122,6 +125,7 @@ main {
 .greeting h2>p{
     font-size: 0.8em;
     float: right;
+    margin-left: 1rem;
 }
 
 .slogan {
@@ -135,9 +139,10 @@ main {
 
 .searchingFood {
     position: absolute;
-    bottom: 15rem;
+    bottom: clamp(10rem, 15vh, 20rem);
+    margin-top: 1rem;
     display: flex;
-    width: clamp(15rem, 23rem, 25rem);
+    width: clamp(10rem, 90vw, 25rem);
     height: 2rem;
     display: inline-block;
     margin-top: 2rem;
@@ -383,6 +388,51 @@ input::placeholder {
     opacity: 1;
 }
 
+.opening-hours {
+    text-align: center;
+    padding: 2rem;
+}
+
+.table-book {
+    text-decoration: underline;
+    font-size: 2rem;
+
+}
+
+
+.opening-hours h2 {
+    font-size: 5rem;
+    margin: 2rem;
+}
+
+.phone-button {
+    font-size: 3rem;
+}
+
+.opening-hours p {
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.phone-number {
+    font-size: 3rem;
+    color: orange;
+    margin: 2rem;
+}
+
+.hours {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.days{
+    font-size: 2rem;
+}
+
+.time{
+    font-size: 3rem;
+}
 
 
 @media screen and (min-width: 1200px) {
@@ -434,3 +484,8 @@ input::placeholder {
     }
 }
 
+/* global classes */
+
+.no-dec {
+    text-decoration: none;
+}

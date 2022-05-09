@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/6155000134.js" crossorigin="anonymous" ascync></script>
-    <script src="script.js" async></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -189,20 +189,30 @@
 
     </section>
 
-    <section class="openingHours">
-        <a href="#">Book a Table</a>
-
+    <section class="opening-hours">
+        <a class="table-book no-dec" href="#">Book a Table</a>
+        
+        
         <h2>
             Opening Hours
         </h2>
+        
+        <br>
+
+        <a class="phone-button no-dec" href="tel:1234567890">&#9742;</a>
+
+        <p>Call Now</p>
+
+        <a class="phone-number no-dec" href="tel:1234567890">+(123) 456 7890</a>
+
         <section class="hours">
             <section class="monTues">
-                <span>Monday - Tuesday</span><br>
-                <span>09:00 - 22:00</span>
+                <span class="days">Monday - Tuesday</span><br>
+                <span class="time">09:00 - 22:00</span>
             </section>
             <section class="friSun">
-                <span>Friday - Sunday</span>
-                <span>11:00 - 20:00</span>
+                <span class="days">Friday - Sunday</span><br>
+                <span class="time">11:00 - 20:00</span>
             </section>
         </section>
         <div class="imageOfFood">
