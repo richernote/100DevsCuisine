@@ -6,14 +6,10 @@ const selector = document.querySelector('.custom-selector');
 const menuShow = () => {
     nav.classList.toggle('flipOut'); 
 }
-document.getElementById('dropDownButton').addEventListener('click', menuShow);
+document.getElementById('drop-down-button').addEventListener('click', menuShow);
 
 
 //--------------  drop down for location search ----------------
-
-selector.addEventListener('change', e => {
-    console.log(`changed to ${e.target.value}`)
-})
 
 selector.addEventListener('mousedown', e => {
     e.preventDefault();
