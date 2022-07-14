@@ -12,6 +12,8 @@
 
 body {
     font-family: 'Teko', sans-serif;
+    height: 100%;
+    width: 100%;
 }
 
 header {
@@ -19,7 +21,8 @@ header {
     display: flex;
     width: 100;
     height: 3rem;
-    justify-content: space-evenly;
+    padding: 0 1rem;
+    justify-content: space-between;
     align-items: center;
     font-weight: 700;
 }
@@ -33,6 +36,10 @@ header {
     height: calc(100vh - 3rem);
     width: 0;
     z-index: 2;
+}
+
+.navigation ul {
+    margin-top: 3rem;
 }
 
 .navigation.flipOut {
@@ -105,27 +112,34 @@ main {
 }
 
 .greeting {
-    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     color: var(--coffee);
-    clear: both ;
+    margin: 3rem 0;
 }
 
 .main-background {
     display: none;
 }
 
-.greeting h2 {
-    float: right;
+.codeCoffee {
+    clear: both;
+    width: 100vw;
+    height: auto;
     font-family: 'Inspiration', cursive;
-    font-size: clamp(10rem, 15vh, 20rem);
-    margin: 3rem 0;
+    font-size: 15vh;
+    padding: 0 1rem;
     display: block;
 }
 
-.greeting h2>p{
-    font-size: 1em;
+.coders {
+    float: left;
+}
+
+.coffee {
     float: right;
-    margin-left: 1rem;
 }
 
 .slogan {
@@ -133,6 +147,7 @@ main {
     font-size: 1.7rem;  
     height: 2rem;
     width: 90vw;
+    margin-top: 2rem;
     text-align: center;
     color: var(--coffee)
 }
@@ -142,10 +157,10 @@ main {
     bottom: clamp(10rem, 15vh, 20rem);
     margin-top: 1rem;
     display: flex;
-    width: clamp(10rem, 90vw, 25rem);
+    width: clamp(10rem, 90vw, 35rem);
     height: 2rem;
     display: inline-block;
-    margin-top: 2rem;
+    margin: 2rem;
 }
 
 .searching-food input {
@@ -424,9 +439,11 @@ input::placeholder {
 }
 
 .hours {
+    margin: 2rem;
     display: flex;
+    max-width: 800px;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .days{
@@ -495,4 +512,56 @@ input::placeholder {
 
 .no-dec {
     text-decoration: none;
+}
+
+@media screen and (min-width: 500px) {
+    header{ 
+        height: 4rem;
+        width: 100vw;
+        font-size: 1.75rem;
+    }
+
+    .others {
+        font-size: 1.75rem;
+        width: 20rem;
+    }
+
+    #search {
+        width: 15rem;
+        height: 2.2rem;
+    }
+
+    .codeCoffee {
+        font-size: 17rem;
+        max-width: 750px;
+    }
+
+    .slogan {
+        font-size: 3rem;
+        margin-top: 5rem;
+    }
+
+    .nav-links {
+        font-size: 2rem;
+    }
+    
+    .searching-food input,
+    #locations {
+        height: 3rem;
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        height: auto;
+    }
+
+    .codeCoffee * {
+        font-size: 13rem;
+    }
+
+    .slogan {
+        font-size: 2rem;
+    }
 }
